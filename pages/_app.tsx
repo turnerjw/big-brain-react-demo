@@ -7,14 +7,14 @@ function MyApp({ Component, pageProps }: AppProps) {
     <div className="container mx-auto px-10">
       <Link href="/">
         <a>
-          <h1 className="text-7xl font-bold mt-10">
+          <h1 className="text-7xl font-bold mt-20">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
               Big Brain React
             </span>
           </h1>
         </a>
       </Link>
-      <div className="p-10">
+      <div className="p-20">
         <Component {...pageProps} />
       </div>
     </div>
