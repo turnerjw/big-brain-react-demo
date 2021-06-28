@@ -6,7 +6,7 @@ interface LinkCardProps {
 export function LinkCard({ text, title }: LinkCardProps): JSX.Element {
   return (
     <div
-      className="rounded-3xl p-10 bg-gray-100 transition 
+      className="rounded-3xl p-10 bg-gray-100 shadow-md transition 
     hover:shadow-2xl transform hover:-translate-y-1"
     >
       <h3 className="text-4xl font-bold">{title}</h3>
