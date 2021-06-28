@@ -1,3 +1,5 @@
+import { PokemonCards } from "components/PokemonCards";
+
 export default function B() {
-  return <div>B</div>;
+  return <PokemonCards />;
 }
