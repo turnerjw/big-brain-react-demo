@@ -1,12 +1,12 @@
 import Link from "next/link";
-import { Card } from "components/Card";
+import { LinkCard } from "components/LinkCard";
 
 export default function Home() {
   return (
     <div className="grid grid-cols-2 gap-10">
       <Link href="/a">
         <a>
-          <Card
+          <LinkCard
             text="Displays Pokémon in rows that scroll vertically. Each pokémon can
               be clicked to indicate that it has been caught."
             title="Component A"
@@ -15,7 +15,7 @@ export default function Home() {
       </Link>
       <Link href="/b">
         <a>
-          <Card
+          <LinkCard
             text="Displays Pokémon in cards that scroll horizontally. Each pokémon
             can be clicked to indicate that it has been caught."
             title="Component B"

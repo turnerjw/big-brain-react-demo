@@ -1,9 +1,9 @@
-interface CardProps {
+interface LinkCardProps {
   title: string;
   text: string;
 }
 
-export function Card({ text, title }: CardProps): JSX.Element {
+export function LinkCard({ text, title }: LinkCardProps): JSX.Element {
   return (
     <div
       className="rounded-3xl p-10 bg-gray-100 transition 
