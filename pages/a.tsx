@@ -1,3 +1,5 @@
+import { PokemonRows } from "components/PokemonRows";
+
 export default function A() {
-  return <div>A</div>;
+  return <PokemonRows />;
 }
