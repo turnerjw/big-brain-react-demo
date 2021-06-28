@@ -1,5 +1,7 @@
 import { PokemonCards } from "components/PokemonCards";
+import { usePokemon } from "components/usePokemon";
 
 export default function B() {
-  return <PokemonCards />;
+  const { pokemon, handleCatchClick } = usePokemon();
+  return <PokemonCards pokemon={pokemon} onCatchClick={handleCatchClick} />;
 }

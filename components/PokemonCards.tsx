@@ -1,19 +1,17 @@
-import { pokemonData } from "data";
+import { Pokemon, pokemonData } from "data";
 import { useState } from "react";
 
-export function PokemonCards(): JSX.Element {
-  const [pokemon, setPokemon] = useState(pokemonData);
+export interface PokemonCardsProps {
+  pokemon: Pokemon[];
+  onCatchClick: (idToCatch: string) => void;
+}
 
+export function PokemonCards({
+  onCatchClick,
+  pokemon,
+}: PokemonCardsProps): JSX.Element {
   const handleCaughtClick = (idToCatch: string) => {
-    setPokemon((current) =>
-      current.map((p) => {
-        if (p.number === idToCatch) {
-          return { ...p, caught: true };
-        } else {
-          return p;
-        }
-      })
-    );
+    onCatchClick(idToCatch);
   };
 
   return (

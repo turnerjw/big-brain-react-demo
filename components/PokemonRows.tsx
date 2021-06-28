@@ -1,19 +1,17 @@
-import { pokemonData } from "data";
+import { Pokemon, pokemonData } from "data";
 import { useState } from "react";
 
-export function PokemonRows(): JSX.Element {
-  const [pokemon, setPokemon] = useState(pokemonData);
+export interface PokemonRowsProps {
+  pokemon: Pokemon[];
+  onCatchClick: (idToCatch: string) => void;
+}
 
-  const handleCaughtClick = (idToCatch: string) => {
-    setPokemon((current) =>
-      current.map((p) => {
-        if (p.number === idToCatch) {
-          return { ...p, caught: true };
-        } else {
-          return p;
-        }
-      })
-    );
+export function PokemonRows({
+  onCatchClick,
+  pokemon,
+}: PokemonRowsProps): JSX.Element {
+  const handleCatchClick = (idToCatch: string) => {
+    onCatchClick(idToCatch);
   };
 
   return (
@@ -30,7 +28,7 @@ export function PokemonRows(): JSX.Element {
             </h4>
             <button
               className={`px-4 py-2 rounded-md bg-${p.colour}-700 text-white`}
-              onClick={() => handleCaughtClick(p.number)}
+              onClick={() => handleCatchClick(p.number)}
             >
               Catch
             </button>

@@ -1,5 +1,7 @@
 import { PokemonRows } from "components/PokemonRows";
+import { usePokemon } from "components/usePokemon";
 
 export default function A() {
-  return <PokemonRows />;
+  const { pokemon, handleCatchClick } = usePokemon();
+  return <PokemonRows pokemon={pokemon} onCatchClick={handleCatchClick} />;
 }
