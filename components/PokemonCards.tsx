@@ -19,6 +19,7 @@ export function PokemonCards({
       {pokemon.map((p) => {
         return (
           <div
+            key={p.number}
             className={`flex flex-col flex-none h-60 w-60 space-y-2 justify-evenly items-center p-5 rounded-3xl bg-gradient-to-r from-${p.colour}-200 to-${p.colour}-300 shadow-md`}
           >
             <h4 className="text-xl font-bold">{p.name}</h4>

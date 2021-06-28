@@ -19,6 +19,7 @@ export function PokemonRows({
       {pokemon.map((p) => {
         return (
           <div
+            key={p.number}
             className={`flex justify-between items-center p-5 rounded-3xl bg-gradient-to-r from-${p.colour}-200 to-${p.colour}-300 shadow-md`}
           >
             <h4 className="text-xl font-bold">#{p.number}</h4>
