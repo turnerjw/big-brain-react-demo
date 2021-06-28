@@ -4,7 +4,7 @@ import { useState } from "react";
 export function PokemonRows(): JSX.Element {
   const [pokemon, setPokemon] = useState(pokemonData);
 
-  const onCaughtClick = (idToCatch: string) => {
+  const handleCaughtClick = (idToCatch: string) => {
     setPokemon((current) =>
       current.map((p) => {
         if (p.number === idToCatch) {
@@ -30,7 +30,7 @@ export function PokemonRows(): JSX.Element {
             </h4>
             <button
               className={`px-4 py-2 rounded-md bg-${p.colour}-700 text-white`}
-              onClick={() => onCaughtClick(p.number)}
+              onClick={() => handleCaughtClick(p.number)}
             >
               Catch
             </button>
