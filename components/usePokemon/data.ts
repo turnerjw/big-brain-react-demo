@@ -1,9 +1,4 @@
-export interface Pokemon {
-  name: string;
-  number: string;
-  colour: "green" | "red" | "blue" | "yellow";
-  caught: boolean;
-}
+import { Pokemon } from "types/Pokemon";
 
 export const pokemonData: Pokemon[] = [
   {

@@ -1,5 +1,6 @@
-import { Pokemon, pokemonData } from "data";
 import { useState } from "react";
+import { Pokemon } from "types/Pokemon";
+import { pokemonData } from "./data";
 
 export interface UsePokemonResult {
   pokemon: Pokemon[];
